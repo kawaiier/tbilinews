@@ -7,22 +7,51 @@ class News extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            news : [],
-            headlines: []
+            news : [
+                {id: 1, title: 'Shooting in Arkansas'},
+                {id: 2, title: 'Dancing in the moonlight'},
+                {id: 3, title: 'Dancing in the moonlight'}
+            ],
+            headlines: [],
+            title: 'slowpoke'
         };
         this.getNews = this.getNews.bind(this);
+        this.getHeadlines = this.getHeadlines.bind(this);
+        this.getNews();
     }
 
-    getNews(data) {
-        data.map(i => this.state.headlines.push(i.title));
+    getNews() {
+        let url = `https://pokeapi.co/api/v2/pokemon/${this.state.title}`;
+        axios.get(url).then(response => this.getHeadlines(response.data.abilities));
+        console.log("CLick!");
+    }
+
+    getHeadlines(data) {
+        if (data.length === 0){
+            this.setState(
+                {headlines : this.state.news}
+            )
+        } else {
+            let newArray = []
+            data.map(i => newArray.push(i.ability.name));
+            this.setState({
+                headlines : newArray
+            })
+        }
+        console.log(`Array in News: ${this.state.headlines}`)
     }
 
     componentDidMount() {
-        axios.get(`https://newsapi.org/v2/top-headlines?country=russia&apiKey=d7a51ec1349f4111afb23128ac6591d1`).then(response => this.getNews(response.data.articles));
+        
+        
     }
     
     render() {
-        return <Article {...this.props} headlines={this.state.headlines}/>
+        return (
+        <div>
+            <Article headlines={this.state.headlines} name={this.state.title}/>
+        </div>
+        )
     }
 }
 
