@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tbilinews/static/css/main.3e19ed71.chunk.css",
-    "main.js": "/tbilinews/static/js/main.1dfa79aa.chunk.js",
-    "main.js.map": "/tbilinews/static/js/main.1dfa79aa.chunk.js.map",
+    "main.js": "/tbilinews/static/js/main.653cfdce.chunk.js",
+    "main.js.map": "/tbilinews/static/js/main.653cfdce.chunk.js.map",
     "runtime-main.js": "/tbilinews/static/js/runtime-main.f0a5155e.js",
     "runtime-main.js.map": "/tbilinews/static/js/runtime-main.f0a5155e.js.map",
     "static/js/2.ea56b7d6.chunk.js": "/tbilinews/static/js/2.ea56b7d6.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.f0a5155e.js",
     "static/js/2.ea56b7d6.chunk.js",
     "static/css/main.3e19ed71.chunk.css",
-    "static/js/main.1dfa79aa.chunk.js"
+    "static/js/main.653cfdce.chunk.js"
   ]
 }
