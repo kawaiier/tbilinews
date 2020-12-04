@@ -21,7 +21,7 @@ class News extends React.Component {
 
     getNews() {
         if (this.state.newsRequested) {
-            let url = `https://newsapi.org/v2/everything?q=tbilisi&sources=reuters&domains=www.reuters.com&pageSize=10&sortBy=publishedAt&apiKey=d7a51ec1349f4111afb23128ac6591d1`;
+            let url = process.env.REACT_APP_NEWS_API;
             axios.get(url).then(response => this.getHeadlines(response.data.articles));
             this.setState({
                 newsRequested: false
