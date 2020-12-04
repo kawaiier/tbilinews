@@ -1,0 +1,32 @@
+.articlesBlock {
+    padding-bottom: 100px;
+}
+
+.articleItem {
+    display: flex;
+    padding-bottom: 40px;
+    max-width: 800px;
+    min-width: 400px;
+}
+
+.articleTitle {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 300px;
+    /* width: 300px; */
+    text-align: left;
+}
+
+.articleDescription {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: burlywood;
+}
